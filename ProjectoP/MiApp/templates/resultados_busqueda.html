@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados de Búsqueda</title>
+</head>
+<body>
+    <h1>Resultados de Búsqueda</h1>
+    <ul>
+        {% for resultado in resultados %}
+            <li>{{ resultado.nombre }}</li>
+        {% empty %}
+            <p>No se encontraron resultados.</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>

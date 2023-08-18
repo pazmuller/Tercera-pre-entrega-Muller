@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Producto</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Agregar Producto</h1>
+    <form method="post"  class="custom-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Agregar</button>
+    </form>
+</body>
+</html>

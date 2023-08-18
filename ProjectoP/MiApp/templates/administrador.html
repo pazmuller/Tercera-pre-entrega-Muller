@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Administrador</title>
+</head>
+<body>
+    <h1>Panel de Administrador</h1>
+    
+    <h2>Productos</h2>
+    <ul>
+        {% for producto in productos %}
+            <li>{{ producto.nombre }} - {{ producto.precio }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Categorías</h2>
+    <ul>
+        {% for categoria in categorias %}
+            <li>{{ categoria.nombre }} - {{ categoria.descripcion }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Clientes</h2>
+    <ul>
+        {% for cliente in clientes %}
+            <li>{{ cliente.nombre }} - {{ cliente.correo }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* styles.css */
+
+/* Cambiar el fondo y el color del texto de todos los encabezados h1 */
+h1 {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Cambiar el estilo del botón de agregar */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Cambiar el color de fondo de los formularios */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Aplicar estilos a un formulario con la clase custom-form */
+.custom-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;  /* Mostrar los elementos en una fila */
+}
+
+.nav-list li {
+    margin-right: 20px;  /* Espacio entre los elementos */
+}
+
+.nav-list li:last-child {
+    margin-right: 0;  /* Sin margen derecho para el último elemento */
+}
+
+
+
+/* Estilos para el elemento <nav> */
+nav {
+    text-align: center; /* Centrar el contenido horizontalmente */
+    padding-top: 20px; /* Espacio superior para que no quede pegado al borde superior */
+}
+
+/* Estilos para la lista de navegación */
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* Cambia a "inline-block" para centrar */
+    vertical-align: top; /* Alinear al principio para que no haya espacio en blanco debajo */
+}
+
+.nav-list li {
+    display: inline; /* Mostrar los elementos en la misma línea */
+    margin-right: 20px;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+
+
+/* Estilos para el elemento <nav> (mismo estilo que antes) */
+nav {
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Estilos para la lista de navegación (mismo estilo que antes) */
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.nav-list li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+
+/* Estilos para el título de la página */
+h1 {
+    background-image: url('images/894aa45f372ca0073009ba0e16e3409b.jpg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    color: black;
+    text-align: center;
+    padding: 100px 0; /* Ajusta el espacio vertical según tu diseño */
+    margin: 0;
+    font-size: 60px;
+}
+
+/* Estilos para ocultar las secciones */
+.hidden {
+    display: none;
+}
+
+/* Estilos para la barra de navegación */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Cambia el tipo de letra según tus preferencias */
+}
+
+.nav-list li {
+    margin: 0;
+    margin-right: 100px; /* Aumenta el espacio entre los botones */
+}
+
+.nav-list li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último botón */
+}
+
+.nav-list a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover {
+    background-color: #555;
+}

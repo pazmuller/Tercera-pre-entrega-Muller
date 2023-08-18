@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Tienda - Inicio</title>
+    <link rel="stylesheet" href="{% static 'css/styless.css' %}">
+
+</head>
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#buscar">Buscar</a></li>
+            <li><a href="#cliente">Clientes</a></li>
+            <li><a href="#categoria">Categorías</a></li>
+            <li><a href="#producto">Productos</a></li>
+        </ul>
+    </nav>
+    
+    <h1>Bienvenido a Mi Tienda Online Intermedia de Django - CoderHouse</h1>
+    
+    <section id="inicio">
+        <h2>Inicio</h2>
+        <form method="post" action="{% url 'buscar' %}">
+            {% csrf_token %}
+            {{ busqueda_form.as_p }}
+            <button type="submit">Buscar</button>
+        </form>
+    </section>
+    
+    <section id="buscar">
+        <h2>Buscar</h2>
+        <form method="post" action="{% url 'buscar' %}">
+            {% csrf_token %}
+            {{ busqueda_form.as_p }}
+            <button type="submit">Buscar</button>
+        </form>
+    </section>
+    
+    <section id="cliente">
+        <h2>Agregar Cliente</h2>
+        <form method="post" action="{% url 'agregar_cliente' %}">
+            {% csrf_token %}
+            {{ cliente_form.as_p }}
+            <button type="submit">Agregar Cliente</button>
+        </form>
+    </section>
+    
+    <section id="categoria">
+        <h2>Añadir Categoría</h2>
+        <form method="post" action="{% url 'agregar_categoria' %}">
+            {% csrf_token %}
+            {{ categoria_form.as_p }}
+            <button type="submit">Añadir Categoría</button>
+        </form>
+    </section>
+
+    <section id="producto">
+        <h2>Agregar Producto</h2>
+        <form method="post" action="{% url 'agregar_producto' %}">
+            {% csrf_token %}
+            {{ producto_form.as_p }}
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </section>
+    
+</body>
+</html>
+
+<script>
+    const navLinks = document.querySelectorAll('.nav-list a');
+    const sections = document.querySelectorAll('section');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(targetId).classList.remove('hidden');
+        });
+    });
+</script>
+
+
+
